@@ -24,10 +24,9 @@ function agregarPropiedad(objeto, property) {
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
 
-  objeto[property] = null
+ objeto[property] = null
  return objeto
 }
-
 function invocarMetodo(objeto, metodo) {
   // "metodo" es una cadena que contiene el nombre de un método (funcion) en el objeto
   // Invoca ese método
@@ -43,9 +42,8 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
 
-  var valor = objetoMisterioso['numeroMisterioso'];
-  return valor * 5
-
+  var aux = objetoMisterioso["numeroMisterioso"]
+  return aux * 5
 }
 
 function eliminarPropiedad(objeto, unaPropiedad) {
@@ -54,7 +52,7 @@ function eliminarPropiedad(objeto, unaPropiedad) {
   // Devuelve el objeto
   // Tu código:
 
-delete objeto [unaPropiedad]
+delete objeto[unaPropiedad]
 return objeto
 
 }
@@ -65,11 +63,11 @@ function nuevoUsuario(nombre, email, password) {
   // Tu código:
 
   var objeto = {
-  nombre: nombre,
-  email: email,
-  password: password}
-  return objeto
-
+    nombre: nombre,
+    email: email,
+    password: password,
+  }
+return objeto
 }
 
 function tieneEmail(usuario) {
@@ -79,8 +77,8 @@ function tieneEmail(usuario) {
 
 if (usuario.email){
   return true
-}return false
-
+}
+return false
 }
   
 
@@ -116,9 +114,8 @@ function actualizarPassword(usuario, nuevaPassword) {
   // Tu código:
  
 
- usuario.password = nuevaPassword;
- return usuario
-
+ usuario.password = nuevaPassword
+   return usuario
 }
 
 function agregarAmigo(usuario, nuevoAmigo) {
@@ -127,8 +124,9 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Devuelve el objeto "usuario"
   // // Tu código:
 
-   usuario.amigos.push(nuevoAmigo)
-   return usuario
+
+  usuario.amigos.push(nuevoAmigo)
+  return usuario
 
 }
 
@@ -139,10 +137,11 @@ function pasarUsuarioAPremium(usuarios) {
   // Devuelve el array de usuarios
   // Tu código:
 
-   for(var i = 0; i < usuarios.length; i++ ){
-     usuarios[i].esPremium = true;
+   for (let i = 0; i < usuarios.length; i ++) {
+     usuarios[i].esPremium = true
+     
    }
- return usuarios
+   return usuarios
 }
 
 function sumarLikesDeUsuario(usuario) {
@@ -155,11 +154,10 @@ function sumarLikesDeUsuario(usuario) {
 
   var sumaDeLikes = 0
 
-  for (let i = 0; i < usuario.posts.length; i ++) {
+  for (let i = 0; i < usuario.posts.length; i++) {
     sumaDeLikes = sumaDeLikes + usuario.posts[i].likes
-    
   }
-  return sumaDeLikes
+  return sumaDeLikes 
 }
 
 function agregarMetodoCalculoDescuento(producto) {
