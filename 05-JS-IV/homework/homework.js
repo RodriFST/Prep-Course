@@ -104,9 +104,7 @@ function verificarPassword(usuario, password) {
   // De lo contrario, devuelve "false"
   // // Tu código:
 
- if (usuario.password === password){
-   return true
- } return false
+ return usuario.password === password ? true : false
 }
 function actualizarPassword(usuario, nuevaPassword) {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
